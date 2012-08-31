@@ -1,12 +1,11 @@
 <?php
-add_plugin_hook('install', 'exhibit_item_title_switch');
+add_plugin_hook('install', 'item_title_switch');
 
-function exhibit_item_title_switch($title, $item) {
+function item_title_switch($title, $item) {
 /**
- * Replace the title of all items in Exhibit Builder with a different field.
+ * Replace the title of all items in public/admin view with a different field.
  *
- * Add this to a new plugin, change the field to whatever field you want, and 
- * activate the plugin.
+ * For use with element sets other than PBCore, change the new field to whatever field you want, and activate the plugin.
  */
     $request = Zend_Controller_Front::getInstance()->getRequest();
 
@@ -16,4 +15,4 @@ function exhibit_item_title_switch($title, $item) {
     return $title;
 }
 
-add_filter(array('Display', 'Item', 'Dublin Core', 'Title'), exhibit_item_title_switch);
+add_filter(array('Display', 'Item', 'Dublin Core', 'Title'), item_title_switch);
