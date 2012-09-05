@@ -1,5 +1,5 @@
 <?php
-add_plugin_hook('install', 'item_title_switch');
+add_plugin_hook('item_title_switch');
 
 function item_title_switch($title, $item) {
 /**
