@@ -9,7 +9,7 @@ function item_title_switch($title, $item) {
     $request = Zend_Controller_Front::getInstance()->getRequest();
 
         // Replace title field here.
-        $title = item('BeatlesLive', 'Title', null, $item);
+        $title = item('PBCore', 'Title', null, $item);
 
     return $title;
 }
